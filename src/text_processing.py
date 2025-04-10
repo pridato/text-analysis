@@ -20,4 +20,7 @@ def process_text(text, analysis_type='summary'):
     else:
         result = {'error': 'Invalid analysis type'}
 
+    print(
+        f"Analysis Type: {analysis_type}, Result: {result}"
+    )
     return result

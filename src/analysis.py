@@ -29,6 +29,7 @@ def classify_text(text):
     result = classifier(text, candidate_labels=labels)
 
     print(result)
+
     # Filtrar solo las etiquetas con score > 0.6
     filtered_result = {
         "labels": [],

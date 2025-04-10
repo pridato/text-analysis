@@ -17,7 +17,8 @@ def analyze_text():
     text = data['text']
     analysis_type = data.get('analysis_type', 'summary')
     result = process_text(text, analysis_type)
-    print(result)
+    if 'error' in result:
+        return jsonify({'error': result['error']}), 400
     return jsonify({'analysis': result}), 200
 
 if __name__ == '__main__':
