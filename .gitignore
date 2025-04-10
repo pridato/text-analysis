@@ -1,0 +1,36 @@
+# Entorno virtual
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias de Python que no deberían estar en el repositorio
+*.egg-info/
+dist/
+build/
+
+# Archivos de configuración de flake8, linters u otros
+*.tox
+*.coverage
+*.coverage.*
+*.hypothesis/
+
+# Logs
+*.log
+
+# Archivos generados por Flask o similar
+instance/
+*.pid
+*.sqlite3
+
+# Archivos específicos de HuggingFace que no necesitas subir
+*.h5
+*.pt
