@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from src.text_processing import process_text
 
 app = Flask(__name__)
 
@@ -14,6 +15,10 @@ def analyze_text():
         return jsonify({'error': 'No text provided'}), 400
 
     text = data['text']
+    analysis_type = data.get('analysis_type', 'summary')
+    result = process_text(text, analysis_type)
+    print(result)
+    return jsonify({'analysis': result}), 200
 
 if __name__ == '__main__':
     app.run()
